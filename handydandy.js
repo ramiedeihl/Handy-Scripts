@@ -6,3 +6,11 @@ window.onload = function() {
     }
 }
 // ------------------------------------------
+
+// Test for variable
+
+if (typeof pagetype === 'undefined') {
+    // pagetype doesn't exist
+}
+
+// ------------------------------------------
