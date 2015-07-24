@@ -1,0 +1,4 @@
+https://developers.google.com/speed/libraries/ 
+
+
+http://www.impressivewebs.com/callback-functions-javascript/
