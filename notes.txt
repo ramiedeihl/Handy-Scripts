@@ -1,4 +1,8 @@
+Animation Sense:
+https://css-tricks.com/examples/jQueryStop/
+
+Goog Libs:
 https://developers.google.com/speed/libraries/ 
 
-
+Callbacks:
 http://www.impressivewebs.com/callback-functions-javascript/
