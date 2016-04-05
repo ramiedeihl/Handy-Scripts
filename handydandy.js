@@ -14,3 +14,23 @@ if (typeof pagetype === 'undefined') {
 }
 
 // ------------------------------------------
+
+// add multiple values to a cookie
+
+document.cookie = "myCookie=" + JSON.stringify({foo: 'bar', baz: 'poo'});
+
+// CHECK FOR COOKIE
+
+if (document.cookie.indexOf("tt_typeahead") >= 0) {
+  // They've been here before.
+  alert("hello again");
+	}
+	
+	else {
+  // set a new cookie
+
+  document.cookie = "tt_typeahead=products; expires=Thu, 18 Dec 2015 12:00:00 UTC";
+  alert("this is your first time");
+  window.location.reload();
+  
+}
