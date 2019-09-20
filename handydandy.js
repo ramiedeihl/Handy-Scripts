@@ -1,3 +1,9 @@
+// PIXI JS from CDN
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+
+
+
 //One time page refresh after first page load
 window.onload = function() {
     if(!window.location.hash) {
@@ -34,3 +40,39 @@ if (document.cookie.indexOf("tt_typeahead") >= 0) {
   window.location.reload();
   
 }
+
+// ---------------------------------------
+// XMLHttpRequest
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+};
+xhttp.open("GET", "filename", true);
+xhttp.send();
+
+// ---------------------------------------
+// JSON P example
+
+<html>
+    <head>
+    </head>
+    <body>
+        <div id = 'twitterFeed'></div>
+        <script>
+        function myCallback(dataWeGotViaJsonp){
+            var text = '';
+            var len = dataWeGotViaJsonp.length;
+            for(var i=0;i<len;i++){
+                twitterEntry = dataWeGotViaJsonp[i];
+                text += '<p><img src = "' + twitterEntry.user.profile_image_url_https +'"/>' + twitterEntry['text'] + '</p>'
+            }
+            document.getElementById('twitterFeed').innerHTML = text;
+        }
+        </script>
+        <script type="text/javascript" src="http://twitter.com/status/user_timeline/padraicb.json?count=10&callback=myCallback"></script>
+    </body>
+</html>
